@@ -1,12 +1,17 @@
-var app = angular.module('mean-wiki', ['ngRoute']);
+angular.module('mean-wiki', [
+  'app.routes', 
+  'authService', 
+  'mainCtrl', 
+  'userService', 
+  'userCtrl', 
+  'articleCtrl',
+  'articleService'
+])
 
-app.config(function($routeProvider){
-  $routeProvider
-    .when('/', {
-      templateUrl: 'app/components/home/homeView.html',
-      controller: 'homeController'
-    })
-})
+// application configuration to integrate token into requests
+.config(function($httpProvider) {
 
+  // attach our auth interceptor to the http requests
+  $httpProvider.interceptors.push('AuthInterceptor');
 
-
+});

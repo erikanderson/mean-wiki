@@ -1,19 +1,16 @@
-.body, .container, .main {
-  height: 100%;
+.navbar-right {
+  margin-right: 15px;
 }
 
-.left {
-  width: 250px;
-  height: 100%;
-/*  background: #2980b9;*/
+.centerform {
+  margin: 0 auto;
+  float: none;
 }
 
-.right {
-  height: 100%;
-/*  background: #e67e22;*/
+.jumbotext {
+  text-align: center;
 }
 
-a {
-  transition: all 0.45s cubic-bezier(0.35, 0, 0.25, 1);
-}
+#mainnav {
+  background-color: #607D8B;
 }
